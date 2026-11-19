@@ -1,7 +1,7 @@
-# Include the app's actual source languages in GitHub's language statistics.
+# Tell GitHub Linguist to include the project's source files in language statistics.
 *.tsx linguist-detectable=true
 *.ts linguist-detectable=true
-*.css linguist-detectable=true
-*.html linguist-detectable=true
-*.js linguist-detectable=true
-*.json linguist-detectable=true
+*.css linguist-detectable=true linguist-language=CSS
+*.html linguist-detectable=true linguist-language=HTML
+*.js linguist-detectable=true linguist-language=JavaScript
+*.json linguist-detectable=true linguist-language=JSON
