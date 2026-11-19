@@ -1,0 +1,19 @@
+{
+  "name": "FitSphere — Move Well",
+  "short_name": "FitSphere",
+  "description": "A personal fitness and wellness companion.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#101a18",
+  "theme_color": "#101a18",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./fit.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
