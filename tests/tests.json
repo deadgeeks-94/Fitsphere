@@ -1,0 +1,88 @@
+[
+  {
+    "name": "Sign in and reach the private dashboard",
+    "sanity": true,
+    "viewport": "mobile",
+    "covers": [
+      "authentication redirect and session restoration",
+      "protected dashboard",
+      "mobile navigation"
+    ],
+    "description": "Verifies a user can authenticate and see their own FitSphere dashboard and main navigation.",
+    "steps": [
+      "Open FitSphere while signed out",
+      "Continue through the sign-in flow",
+      "Return to FitSphere after authentication"
+    ],
+    "expected": "The signed-in dashboard loads with Home, Workouts, Activity and Profile navigation."
+  },
+  {
+    "name": "Browse and filter workout plans",
+    "viewport": "mobile",
+    "covers": [
+      "workout library",
+      "category filtering",
+      "workout detail outline",
+      "exercise safety guidance"
+    ],
+    "description": "Verifies workout categories filter the library and a selected session shows its outline and safety guidance.",
+    "steps": [
+      "Open Workouts",
+      "Select the Strength filter",
+      "Open Bodyweight basics"
+    ],
+    "expected": "Only strength sessions are listed and the selected workout shows its exercise outline and adaptation guidance."
+  },
+  {
+    "name": "Complete a workout and retain its activity record",
+    "viewport": "mobile",
+    "covers": [
+      "workout completion",
+      "authenticated activity create",
+      "activity history read",
+      "durable activity persistence"
+    ],
+    "description": "Verifies completing a suggested session saves a private activity record that remains in the activity history.",
+    "steps": [
+      "Open the Morning mobility workout",
+      "Mark the session complete",
+      "Open Activity",
+      "Refresh FitSphere and return to Activity"
+    ],
+    "expected": "Morning mobility appears in the activity log with its duration and remains after refresh."
+  },
+  {
+    "name": "Validate and save a custom activity",
+    "viewport": "mobile",
+    "covers": [
+      "custom activity form",
+      "duration validation",
+      "activity create",
+      "user-scoped data access"
+    ],
+    "description": "Verifies invalid durations are rejected and a valid custom activity is saved to the signed-in user's history.",
+    "steps": [
+      "Open Activity and choose Log activity",
+      "Enter an activity name and set minutes to 0",
+      "Submit and confirm the form does not save",
+      "Change minutes to 20 and save"
+    ],
+    "expected": "The invalid duration is blocked; the valid 20-minute activity appears in the activity list."
+  },
+  {
+    "name": "Keep account data separate and sign out",
+    "viewport": "desktop",
+    "covers": [
+      "user-isolated activity tables",
+      "profile account details",
+      "sign-out and protected data clearing"
+    ],
+    "description": "Verifies profile details are shown for the current account and signing out returns to the secure entry screen.",
+    "steps": [
+      "Open Profile",
+      "Review the signed-in account",
+      "Choose Sign out"
+    ],
+    "expected": "The account session ends, activity data is cleared from the visible app state, and the sign-in screen is shown."
+  }
+]
